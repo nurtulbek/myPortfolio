@@ -1,0 +1,335 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    padding: 0 42px;
+    border-bottom: 1px solid white;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: Koulen;
+  }
+
+  .header h2 {
+    color: #FFBB00;
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .welcomeText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 30%;
+  }
+
+  .welcomeText h1,
+  .footer h1 {
+    font-size: clamp(3.5rem, 8vw, 9rem);
+    font-family: Koulen;
+    line-height: 0.95;
+    margin: 0;
+  }
+
+  .welcomeText h3 {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-family: sans-serif;
+    font-weight: 400;
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  .welcomePhoto img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .websites {
+    color: #FFBB00;
+  }
+
+  .design {
+    -webkit-text-stroke: 1px white;
+    color: black;
+  }
+
+  .welcomePhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1%;
+  }
+
+  .welcomePhoto img{
+    position: relative;
+    height: 80%;
+  }
+
+  .welcomePhoto img {
+    mask-image: linear-gradient(to bottom, black, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  }
+
+  .techTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #242424;
+    margin: 42px 0;
+    border-radius: 16px;
+    border: 1px solid #898989;
+    font-family: Koulen;
+  }
+
+  .sphere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    border-bottom: 1px solid #898989;
+  }
+
+  .sphere:last-child {
+    border-bottom: none;
+  }
+
+  .sphere h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    margin: 0 0 1rem;
+  }
+
+  .techTools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .html, .git, .firebase {
+    background-color: #FF8400;
+  }
+  
+  .css, .react, .ts, .googleAI {
+    background-color: #0059FF;
+  }
+
+  .nextjs, .figma, .veo, .vercel, .adobeXD {
+    border: 1px solid white;
+  }
+
+  .rest, .sketch, .midjourney, .elevenLabs, .promptEng {
+    background-color: white;
+    -webkit-text-stroke: 0.5px black;
+    color: transparent; /* hollow */
+  }
+
+  .js, .nano {
+    background-color: #FFBB00;
+  }
+
+  .nodejs, .higgsfield {
+    background-color: #186A1C;
+  }
+
+  .techtool {
+    padding: 0 12px;
+    border-radius: 4px;
+    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+    font-family: Koulen;
+    white-space: nowrap;
+  }
+
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 42px 0;
+    gap: 20px;
+    font-family: sans-serif;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(33.333% - 13.33px);
+    min-width: 260px;
+    background-color: #242424;
+    border: 1px solid #898989;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .work img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .work h1 {
+    font-size: 1.6rem;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 0 12px;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .work h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 12px;
+    margin: 0;
+  }
+
+  .work h3 {
+    font-size: 1rem;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 0 12px 1.25rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .track span {
+    background-color: #0072D7;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-family: Koulen;
+    color: white;
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 42px;
+    margin-bottom: 100px;
+    font-family: sans-serif;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+  }
+
+  
+
+
+
+
+  @media (max-width: 900px) {
+    .container {
+      padding: 0 28px;
+    }
+
+    .welcome, .footer{
+      gap: 24px;
+
+      flex-direction: column;
+      align-items: center;
+    }
+
+     .welcomeText h1,
+    .footer h1 {
+      font-size: clamp(3rem, 10vw, 5rem);
+
+    }
+
+    .welcomeText, .footer h1 {
+      max-width: 100%;
+      order: 1;
+      text-align: center;
+    }
+
+    .welcomePhoto {
+      order: 0;
+      height: 500px;
+    }
+
+    .welcomePhoto img {
+      max-height: 100%;
+    }
+
+    .techtool {
+      font-size: 1rem;
+    }
+
+    .work {
+      width: 100%;
+    }
+
+    .contacts {
+      gap: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 18px;
+    }
+
+    .header{
+      font-size: 12px;
+    }
+
+    .welcome,
+    .works,
+    .contacts {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+
+    .welcomeText h1,
+    .footer h1 {
+      font-size: clamp(3rem, 12vw, 4.5rem);
+      line-height: 1.05;
+    }
+
+    .welcomeText h3 {
+      margin-top: 0;
+    }
+
+    .welcomePhoto img {
+      max-width: 70%;
+    }
+
+    .work {
+      width: 100%;
+    }
+
+    .sphere {
+      padding: 18px;
+    }
+
+    .techTools {
+      justify-content: center;
+    }
+
+    .contacts {
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .track span {
+      font-size: 1rem;
+    }
+  }

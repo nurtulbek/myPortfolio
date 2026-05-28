@@ -245,11 +245,14 @@
       padding: 0 28px;
     }
 
-    .welcome, .footer{
+    .welcome{
       gap: 24px;
 
       flex-direction: column;
       align-items: center;
+
+      margin-bottom: 28px;
+      margin-top: 28px; 
     }
 
      .welcomeText h1,
@@ -266,11 +269,12 @@
 
     .welcomePhoto {
       order: 0;
-      height: 500px;
+      height: auto;
     }
 
     .welcomePhoto img {
       max-height: 100%;
+      height: auto;
     }
 
     .techtool {
@@ -288,6 +292,10 @@
 
     .contacts {
       gap: 18px;
+    }
+
+    .footer {
+     margin-top: 42px;
     }
   }
 

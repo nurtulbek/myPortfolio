@@ -29,7 +29,7 @@ function App() {
         <div className="header">
             <h1>RESUL OVEZMYRADOV</h1>
             <h2>CONTACT ME</h2>
-          </div>
+        </div>
       </div>
 
       <div className="container">

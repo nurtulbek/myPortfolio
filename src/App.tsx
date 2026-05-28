@@ -18,10 +18,14 @@ import 'locomotive-scroll/dist/locomotive-scroll.css'
 function App() {
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll()
+  let scroll: LocomotiveScroll
 
-    return () => scroll.destroy() // cleanup
-  }, [])
+  window.addEventListener('load', () => {
+    scroll = new LocomotiveScroll()
+  })
+
+  return () => scroll?.destroy()
+}, [])
 
   return (
     <>  

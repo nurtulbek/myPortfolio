@@ -73,7 +73,7 @@ function App() {
         <div className="works">
           <div className="work pasabahce">
             <div className="img">
-              <img src="../public/pasabahce.svg" alt="" />
+              <img src="../pasabahce.svg" alt="" />
             </div>
             <h1>WEB DEVELOPMENT</h1>
             <h2>Paşabahçe distributor official website </h2>
@@ -85,7 +85,7 @@ function App() {
 
           <div className="work plantmama">
             <div className="img">
-              <img src="../public/plantmama.svg" alt="" />
+              <img src="../plantmama.svg" alt="" />
             </div>
             <h1>UX/UI DESIGN</h1>
             <h2>PlantMama Concept Redesign</h2>
@@ -97,7 +97,7 @@ function App() {
 
           <div className="work bork">
             <div className="img">
-              <img src="../public/bork.svg" alt="" />
+              <img src="../bork.svg" alt="" />
             </div>
             <h1>AI ADS & AI FEATURES</h1>
             <h2>BORK AI Video Aderisement </h2>
@@ -117,19 +117,19 @@ function App() {
             <h1>HAVE A <span className="websites">PROJECT</span> IN MIND? <span className="design">LET'S </span>BUILD IT.</h1>
             <div className="contacts">
               <div className="email contact">
-                <img src="../public/mail.svg" alt="" />
+                <img src="../mail.svg" alt="" />
                 <h3>owezresul0@gmail.com</h3>
               </div>
               <div className="telegram contact">
-                <img src="../public/tg.svg" alt="" />
+                <img src="../tg.svg" alt="" />
                 <h3>@owezresul</h3>
               </div>
               <div className="github contact">
-                <img src="../public/git.svg" alt="" />
+                <img src="../git.svg" alt="" />
                 <h3>@nurtulbek</h3>
               </div>
               <div className="website contact">
-                <img src="../public/web.svg" alt="" />
+                <img src="../web.svg" alt="" />
                 <h3>owezresul.vercel.app</h3>
               </div>
             </div>

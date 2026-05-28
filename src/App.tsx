@@ -11,11 +11,20 @@ import git from "./assets/git.svg";
 import web from "./assets/web.svg";
 import mail from "./assets/mail.svg";
 
+import { useEffect } from 'react'
+import LocomotiveScroll from 'locomotive-scroll'
+import 'locomotive-scroll/dist/locomotive-scroll.css'
+
 function App() {
 
+  useEffect(() => {
+    const scroll = new LocomotiveScroll()
+
+    return () => scroll.destroy() // cleanup
+  }, [])
+
   return (
-    <>
-    
+    <>  
       <div className="container">
         <div className="header">
             <h1>RESUL OVEZMYRADOV</h1>
@@ -159,7 +168,6 @@ function App() {
             </div>
           </div>
         </div>
-
     </>
   )
 }

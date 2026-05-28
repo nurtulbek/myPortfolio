@@ -2,9 +2,9 @@ import "./App.css"
 
 import Banner from "./banner";
 
-import bork from "./assets/bork.svg";
-import pasabahce from "./assets/pasabahce.svg";
-import plantmama from "./assets/plantmama.svg";
+import bork from "./assets/bork.jpg";
+import pasabahce from "./assets/pasabahce.jpg";
+import plantmama from "./assets/plantmama.jpg";
 import me from "./assets/me.png";
 import tg from "./assets/tg.svg";
 import git from "./assets/git.svg";

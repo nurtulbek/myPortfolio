@@ -230,7 +230,10 @@
     min-width: 180px;
   }
 
-  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
 
 

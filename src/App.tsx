@@ -2,6 +2,15 @@ import "./App.css"
 
 import Banner from "./banner";
 
+import bork from "./assets/bork.svg";
+import pasabahce from "./assets/pasabahce.svg";
+import plantmama from "./assets/plantmama.svg";
+import me from "./assets/me.png";
+import tg from "./assets/tg.svg";
+import git from "./assets/git.svg";
+import web from "./assets/web.svg";
+import mail from "./assets/mail.svg";
+
 function App() {
 
   return (
@@ -21,7 +30,7 @@ function App() {
             <h3>Web developer|UX/UI designer|AI specialist</h3>
           </div>    
           <div className="welcomePhoto">
-            <img src="../me.png" alt="my sex photo" />
+            <img src={me} alt="my sex photo" />
           </div>
         </div>
       </div>
@@ -71,40 +80,47 @@ function App() {
 
       <div className="container">
         <div className="works">
-          <div className="work pasabahce">
-            <div className="img">
-              <img src="../pasabahce.svg" alt="" />
+         
+            <div className="work pasabahce">
+               <a href="https://pasabahce.vercel.app" target="_blank" rel="noopener noreferrer">
+                <div className="img">
+                  <img src={pasabahce} alt="" />
+                </div>
+                <h1>WEB DEVELOPMENT</h1>
+                <h2>Paşabahçe distributor official website </h2>
+                <h3>
+                  Product catalog website for a Paşabahçe distributor — 
+                  built for browsing, brand trust, and wholesale lead generation
+                </h3>
+              </a>
             </div>
-            <h1>WEB DEVELOPMENT</h1>
-            <h2>Paşabahçe distributor official website </h2>
-            <h3>
-              Product catalog website for a Paşabahçe distributor — 
-              built for browsing, brand trust, and wholesale lead generation
-            </h3>
-          </div>
-
+          
           <div className="work plantmama">
-            <div className="img">
-              <img src="../plantmama.svg" alt="" />
-            </div>
-            <h1>UX/UI DESIGN</h1>
-            <h2>PlantMama Concept Redesign</h2>
-            <h3>
-              A Figma concept redesign of PlantMama's flower store website.
-              Focused on refreshing the visual style while keeping the brand's original charm intact.
-            </h3>
+            <a href="https://www.figma.com/design/Kutmuk4aDrFlfc34Fg2ZMb/Untitled?node-id=0-1&t=iyFigHvX4iCYWmS9-1" target="_blank" rel="noopener noreferrer">         
+              <div className="img">
+                <img src={plantmama} alt="" />
+              </div>
+              <h1>UX/UI DESIGN</h1>
+              <h2>PlantMama Concept Redesign</h2>
+              <h3>
+                A Figma concept redesign of PlantMama's flower store website.
+                Focused on refreshing the visual style while keeping the brand's original charm intact.
+              </h3>
+            </a>
           </div>
 
           <div className="work bork">
-            <div className="img">
-              <img src="../bork.svg" alt="" />
-            </div>
-            <h1>AI ADS & AI FEATURES</h1>
-            <h2>BORK AI Video Aderisement </h2>
-            <h3>
-              AI-generated video ad created for BORK using Veo 3. 
-              Produced for a client presentation showcasing the brand's premium tech products with high-quality AI visuals.
-            </h3>
+            <a href="https://drive.google.com/drive/folders/12PGUgqR5amVecKkp2bi6OVUIVMi77kmq?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <div className="img">
+                <img src={bork} alt="" />
+              </div>
+              <h1>AI ADS & AI FEATURES</h1>
+              <h2>BORK AI Video Aderisement </h2>
+              <h3>
+                AI-generated video ad created for BORK using Veo 3. 
+                Produced for a client presentation showcasing the brand's premium tech products with high-quality AI visuals.
+              </h3>
+            </a>
           </div>
         </div>
       </div>
@@ -116,22 +132,30 @@ function App() {
           <div className="footer">
             <h1>HAVE A <span className="websites">PROJECT</span> IN MIND? <span className="design">LET'S </span>BUILD IT.</h1>
             <div className="contacts">
+              <a href="mailto:owezresul0@gmail.com" target="_blank" rel="noopener noreferrer">
               <div className="email contact">
-                <img src="../mail.svg" alt="" />
+                <img src={mail} alt="" />
                 <h3>owezresul0@gmail.com</h3>
               </div>
-              <div className="telegram contact">
-                <img src="../tg.svg" alt="" />
+              </a>
+              <a href="https://t.me/owezresul" target="_blank" rel="noopener noreferrer">
+                <div className="telegram contact">
+                <img src={tg} alt="" />
                 <h3>@owezresul</h3>
               </div>
-              <div className="github contact">
-                <img src="../git.svg" alt="" />
-                <h3>@nurtulbek</h3>
-              </div>
-              <div className="website contact">
-                <img src="../web.svg" alt="" />
-                <h3>owezresul.vercel.app</h3>
-              </div>
+              </a>
+              <a href="https://github.com/nurtulbek" target="_blank" rel="noopener noreferrer">
+                <div className="github contact">
+                  <img src={git} alt="" />
+                  <h3>@nurtulbek</h3>
+                </div>
+              </a>
+              <a href="https://owezresul.vercel.app" target="_blank" rel="noopener noreferrer">
+                <div className="website contact">
+                  <img src={web} alt="" />
+                  <h3>owezresul.vercel.app</h3>
+                </div>
+              </a>
             </div>
           </div>
         </div>

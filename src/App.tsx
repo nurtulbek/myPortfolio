@@ -21,7 +21,7 @@ function App() {
             <h3>Web developer|UX/UI designer|AI specialist</h3>
           </div>    
           <div className="welcomePhoto">
-            <img src="../me.png" alt="" />
+            <img src="../me.png" alt="my sex photo" />
           </div>
         </div>
       </div>

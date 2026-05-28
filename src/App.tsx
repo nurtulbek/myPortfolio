@@ -27,12 +27,17 @@ function App() {
   return () => scroll?.destroy()
 }, [])
 
+const scrollToContacts = () => {
+  const el = document.getElementById('contacts')
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
   return (
     <>  
       <div className="container">
         <div className="header">
             <h1>RESUL OVEZMYRADOV</h1>
-            <h2>CONTACT ME</h2>
+            <h2 onClick={scrollToContacts}>CONTACT ME</h2>
         </div>
       </div>
 
@@ -142,7 +147,7 @@ function App() {
         items={['nasa space app local winner', 'in freelance since 2023', 'managed full project lifecycle']}/>
 
         <div className="container">
-          <div className="footer">
+          <div className="footer" id="contacts">
             <h1>HAVE A <span className="websites">PROJECT</span> IN MIND? <span className="design">LET'S </span>BUILD IT.</h1>
             <div className="contacts">
               <a href="mailto:owezresul0@gmail.com" target="_blank" rel="noopener noreferrer">

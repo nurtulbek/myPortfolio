@@ -17,6 +17,8 @@
 
   .header h2 {
     color: #FFBB00;
+
+    cursor: pointer;
   }
 
   .welcome {

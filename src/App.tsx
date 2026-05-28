@@ -48,7 +48,7 @@ const scrollToContacts = () => {
             <h3>Web developer|UX/UI designer|AI specialist</h3>
           </div>    
           <div className="welcomePhoto">
-            <img src={me} alt="my sex photo" />
+            <img src={me} alt="my photo" />
           </div>
         </div>
       </div>

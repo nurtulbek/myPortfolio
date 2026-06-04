@@ -11,11 +11,27 @@ import git from "./assets/git.svg";
 import web from "./assets/web.svg";
 import mail from "./assets/mail.svg";
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
+import { translations } from './translations'
+import type { Language } from './translations'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 function App() {
+  const [language, setLanguage] = useState<Language>(() => {
+    const saved = localStorage.getItem('language') as Language | null
+    return saved || 'en'
+  })
+
+  const t = (key: string): string => {
+    return translations[language][key as keyof typeof translations['en']] || key
+  }
+
+  const toggleLanguage = () => {
+    const newLang = language === 'en' ? 'ru' : 'en'
+    setLanguage(newLang)
+    localStorage.setItem('language', newLang)
+  }
 
   useEffect(() => {
   let scroll: LocomotiveScroll
@@ -37,15 +53,35 @@ const scrollToContacts = () => {
       <div className="container">
         <div className="header">
             <h1>RESUL OVEZMYRADOV</h1>
-            <h2 onClick={scrollToContacts}>CONTACT ME</h2>
+            <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+              <h2 onClick={scrollToContacts} style={{ cursor: 'pointer', margin: 0 }}>{t('contactMe')}</h2>
+              <button
+                onClick={toggleLanguage}
+                style={{
+                  padding: '8px 14px',
+                  background: 'rgba(255,255,255,0.1)',
+                  border: '2px solid white',
+                  color: 'white',
+                  cursor: 'pointer',
+                  fontSize: '12px',
+                  borderRadius: '4px',
+                  fontWeight: 'bold',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+                onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+              >
+                {language === 'en' ? 'РУ' : 'EN'}
+              </button>
+            </div>
         </div>
       </div>
 
       <div className="container">
         <div className="welcome">
           <div className="welcomeText">
-            <h1>I BUILD <span className="websites">WEBSITES.</span> <span className="design">I DESIGN</span> FUTURES.</h1>
-            <h3>Web developer|UX/UI designer|AI specialist</h3>
+            <h1>{t('buildWebsites')} <span className="websites">{t('websites')}</span> <span className="design">{t('design')}</span> {t('futures')}</h1>
+            <h3>{t('subtitle')}</h3>
           </div>    
           <div className="welcomePhoto">
             <img src={me} alt="my photo" />
@@ -57,7 +93,7 @@ const scrollToContacts = () => {
         <div className="tech">
           <div className="techTable">
             <div className="sphere">
-              <h1>WEB DEVELOPMENT</h1>
+              <h1>{t('webDevelopment')}</h1>
               <div className="techTools">
                 <div className="html techtool">HTML</div>
                 <div className="css techtool">CSS</div>
@@ -73,7 +109,7 @@ const scrollToContacts = () => {
               </div>
             </div>
             <div className="sphere">
-              <h1>UX/UI DESIGN</h1>
+              <h1>{t('uxuiDesign')}</h1>
               <div className="techTools">
                 <div className="figma techtool">Figma</div>
                 <div className="sketch techtool">Responsive design</div>
@@ -81,7 +117,7 @@ const scrollToContacts = () => {
               </div>
             </div>
             <div className="sphere">
-              <h1>ARTIFICIAL INTELLIGENCE</h1>
+              <h1>{t('artificialIntelligence')}</h1>
               <div className="techTools">
                 <div className="veo techtool">VEO 3</div>
                 <div className="higgsfield techtool">Higgsfield</div>
@@ -104,11 +140,10 @@ const scrollToContacts = () => {
                 <div className="img">
                   <img src={pasabahce} alt="" />
                 </div>
-                <h1>WEB DEVELOPMENT</h1>
-                <h2>Paşabahçe distributor official website </h2>
+                <h1>{t('webDevelopment')}</h1>
+                <h2>{t('pasabahceTitle')}</h2>
                 <h3>
-                  Product catalog website for a Paşabahçe distributor — 
-                  built for browsing, brand trust, and wholesale lead generation
+                  {t('pasabahceDesc')}
                 </h3>
               </a>
             </div>
@@ -118,11 +153,10 @@ const scrollToContacts = () => {
               <div className="img">
                 <img src={plantmama} alt="" />
               </div>
-              <h1>UX/UI DESIGN</h1>
-              <h2>PlantMama Concept Redesign</h2>
+              <h1>{t('uxuiDesign')}</h1>
+              <h2>{t('plantmamaTitle')}</h2>
               <h3>
-                A Figma concept redesign of PlantMama's flower store website.
-                Focused on refreshing the visual style while keeping the brand's original charm intact.
+                {t('plantmamaDesc')}
               </h3>
             </a>
           </div>
@@ -132,11 +166,10 @@ const scrollToContacts = () => {
               <div className="img">
                 <img src={bork} alt="" />
               </div>
-              <h1>AI ADS & AI FEATURES</h1>
-              <h2>BORK AI Video Aderisement </h2>
+              <h1>{t('artificialIntelligence')}</h1>
+              <h2>{t('borkTitle')}</h2>
               <h3>
-                AI-generated video ad created for BORK using Veo 3. 
-                Produced for a client presentation showcasing the brand's premium tech products with high-quality AI visuals.
+                {t('borkDesc')}
               </h3>
             </a>
           </div>
@@ -144,34 +177,34 @@ const scrollToContacts = () => {
       </div>
 
         <Banner
-        items={['nasa space app local winner', 'in freelance since 2023', 'managed full project lifecycle']}/>
+        items={[t('bannerItem1'), t('bannerItem2'), t('bannerItem3')]}/>
 
         <div className="container">
           <div className="footer" id="contacts">
-            <h1>HAVE A <span className="websites">PROJECT</span> IN MIND? <span className="design">LET'S </span>BUILD IT.</h1>
+            <h1>{t('projectInMind')} <span className="websites">{t('project')}</span> {t('inMind')} <span className="design">{t('letsBuild')}</span> {t('buildIt')}</h1>
             <div className="contacts">
               <a href="mailto:owezresul0@gmail.com" target="_blank" rel="noopener noreferrer">
               <div className="email contact">
                 <img src={mail} alt="" />
-                <h3>owezresul0@gmail.com</h3>
+                <h3>{t('email')}</h3>
               </div>
               </a>
               <a href="https://t.me/owezresul" target="_blank" rel="noopener noreferrer">
                 <div className="telegram contact">
                 <img src={tg} alt="" />
-                <h3>@owezresul</h3>
+                <h3>{t('telegram')}</h3>
               </div>
               </a>
               <a href="https://github.com/nurtulbek" target="_blank" rel="noopener noreferrer">
                 <div className="github contact">
                   <img src={git} alt="" />
-                  <h3>@nurtulbek</h3>
+                  <h3>{t('github')}</h3>
                 </div>
               </a>
               <a href="https://owezresul.web.app" target="_blank" rel="noopener noreferrer">
                 <div className="website contact">
                   <img src={web} alt="" />
-                  <h3>owezresul.web.app</h3>
+                  <h3>{t('website')}</h3>
                 </div>
               </a>
             </div>

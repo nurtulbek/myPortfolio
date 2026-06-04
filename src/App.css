@@ -141,8 +141,7 @@
 
   .rest, .sketch, .midjourney, .elevenLabs, .promptEng {
     background-color: white;
-    -webkit-text-stroke: 1px black;
-    color: transparent; /* hollow */
+    color: black;
   }
 
   .js, .nano {

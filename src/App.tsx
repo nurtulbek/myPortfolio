@@ -168,10 +168,10 @@ const scrollToContacts = () => {
                   <h3>@nurtulbek</h3>
                 </div>
               </a>
-              <a href="https://owezresul.vercel.app" target="_blank" rel="noopener noreferrer">
+              <a href="https://owezresul.web.app" target="_blank" rel="noopener noreferrer">
                 <div className="website contact">
                   <img src={web} alt="" />
-                  <h3>owezresul.vercel.app</h3>
+                  <h3>owezresul.web.app</h3>
                 </div>
               </a>
             </div>

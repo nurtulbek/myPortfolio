@@ -10,6 +10,8 @@ import tg from "./assets/tg.svg";
 import git from "./assets/git.svg";
 import web from "./assets/web.svg";
 import mail from "./assets/mail.svg";
+import oguzkervan from "./assets/oguz-kervan.png";
+import chainybaryga from "./assets/chai.JPG";
 
 import { useEffect, useState } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
@@ -134,10 +136,36 @@ const scrollToContacts = () => {
 
       <div className="container">
         <div className="works">
+
+            <div className="work chainybaryga">
+               <a href="https://chainybaryga.com" target="_blank" rel="noopener noreferrer">
+                <div className="image">
+                  <img src={chainybaryga} alt="" />
+                </div>
+                <h1>{t('webDevelopment')}</h1>
+                <h2>{t('chainybarygaTitle')}</h2>
+                <h3>
+                  {t('chainybarygaDesc')}
+                </h3>
+              </a>
+            </div>
+
+            <div className="work oguzkervan">
+               <a href="https://oguzkervan.com" target="_blank" rel="noopener noreferrer">
+                <div className="image">
+                  <img src={oguzkervan} alt="" />
+                </div>
+                <h1>{t('webDevelopment')}</h1>
+                <h2>{t('oguzkervanTitle')}</h2>
+                <h3>
+                  {t('oguzkervanDesc')}
+                </h3>
+              </a>
+            </div>
          
             <div className="work pasabahce">
                <a href="https://pasabahce.vercel.app" target="_blank" rel="noopener noreferrer">
-                <div className="img">
+                <div className="image">
                   <img src={pasabahce} alt="" />
                 </div>
                 <h1>{t('webDevelopment')}</h1>
@@ -150,7 +178,7 @@ const scrollToContacts = () => {
           
           <div className="work plantmama">
             <a href="https://www.figma.com/design/Kutmuk4aDrFlfc34Fg2ZMb/Untitled?node-id=0-1&t=iyFigHvX4iCYWmS9-1" target="_blank" rel="noopener noreferrer">         
-              <div className="img">
+              <div className="image">
                 <img src={plantmama} alt="" />
               </div>
               <h1>{t('uxuiDesign')}</h1>
@@ -163,7 +191,7 @@ const scrollToContacts = () => {
 
           <div className="work bork">
             <a href="https://drive.google.com/drive/folders/12PGUgqR5amVecKkp2bi6OVUIVMi77kmq?usp=drive_link" target="_blank" rel="noopener noreferrer">
-              <div className="img">
+              <div className="image">
                 <img src={bork} alt="" />
               </div>
               <h1>{t('artificialIntelligence')}</h1>
